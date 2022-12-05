@@ -6,14 +6,15 @@
 import math
 
 
-def calculate_volume(height: int, radius: int) -> float:
+def calculate_cylinder_volume(height: int, radius: int) -> float:
     # This function calculates volume
+
     if height <= 0 or radius <= 0:
         volume = -1
         return volume
     else:
-        volume = math.pi * radius ** 2 * height
-        return float(volume)
+        volume = math.pi * radius**2 * height
+        return volume
 
 
 def main():
@@ -27,7 +28,7 @@ def main():
         height_from_user = float(height_from_user)
         radius_from_user = float(radius_from_user)
         # call functions
-        final_volume = calculate_volume(height_from_user, radius_from_user)
+        final_volume = calculate_cylinder_volume(height_from_user, radius_from_user)
         if final_volume == -1:
             print("Invalid Input")
         else:
