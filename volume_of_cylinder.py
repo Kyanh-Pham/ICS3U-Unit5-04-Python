@@ -6,7 +6,7 @@
 import math
 
 
-def calculate_volume(height: float, radius: float, add: bool) -> float:
+def calculate_volume(height: int, radius: int, add: bool) -> float:
     # This function calculates volume
     if height <= 0:
         volume = -1
