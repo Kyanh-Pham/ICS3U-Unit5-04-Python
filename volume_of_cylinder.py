@@ -6,12 +6,9 @@
 import math
 
 
-def calculate_volume(height: float, radius: float, add: bool) -> float:
+def calculate_volume(height: int, radius: int) -> float:
     # This function calculates volume
-    if height <= 0:
-        volume = -1
-        return volume
-    elif radius <= 0:
+    if height or radius <= 0:
         volume = -1
         return volume
     else:
@@ -20,7 +17,7 @@ def calculate_volume(height: float, radius: float, add: bool) -> float:
 
 
 def main():
-    # this function gets the volume
+    # This function gets the volume
 
     # Input
     height_from_user = input("Enter the height of the cylinder(mm): ")
