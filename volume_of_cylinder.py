@@ -6,7 +6,7 @@
 import math
 
 
-def calculate_volume(height: int, radius: int, add: bool) -> float:
+def calculate_volume(height: float, radius: float, add: bool) -> float:
     # This function calculates volume
     if height <= 0:
         volume = -1
@@ -23,20 +23,20 @@ def main():
     # this function gets the volume
 
     # Input
-    height_str = input("Enter the height of the cylinder(mm): ")
-    radius_str = input("Enter the radius of the cylinder(mm): ")
+    height_from_user = input("Enter the height of the cylinder(mm): ")
+    radius_from_user = input("Enter the radius of the cylinder(mm): ")
 
     try:
-        height = float(height_str)
-        radius = float(radius_str)
+        height_from_user = float(height_from_user)
+        radius_from_user = float(radius_from_user)
         # call functions
-        volume = calculate_volume(height, radius)
-        if volume == -1:
+        final_volume = calculate_volume(height_from_user, radius_from_user)
+        if final_volume == -1:
             print("Invalid Input")
         else:
             print(
                 "The volume of this cylinder with the radius of {0} mm and height {1} mm is {2} mm³.".format(
-                    radius, height, volume
+                    radius_from_user, height_from_user, final_volume
                 )
             )
     except ValueError:
