@@ -10,7 +10,7 @@ def calculate_cylinder_volume(height: int, radius: int) -> float:
     # This function calculates volume
 
     if height <= 0 or radius <= 0:
-        volume = -1
+        volume = float(-1)
         return volume
     else:
         volume = float(math.pi * radius**2 * height)
