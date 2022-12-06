@@ -13,7 +13,7 @@ def calculate_cylinder_volume(height: int, radius: int) -> float:
         volume = -1
         return volume
     else:
-        volume = math.pi * radius**2 * height
+        volume = float(math.pi * radius**2 * height)
         return volume
 
 
